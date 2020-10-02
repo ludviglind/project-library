@@ -16,20 +16,19 @@ class Book {
 
   addBook() {
     library.push(this)
+    this.displayBook()
   }
-}
 
-
-function displayBook() {
-  library.forEach(book => {
+  displayBook() {
+    const book = library[library.length -1]
     const bookDiv = document.createElement('div')
     bookDiv.classList.add('book')
     bookDiv.innerHTML =
-      `<div id="author">${book.author}</div>
-      <div id="title">${book.title}</div>
-      <div id="pages">${book.pages} pgs</div>`
+    `<div id="author">${this.author}</div>
+    <div id="title">${this.title}</div>
+    <div id="pages">${this.pages} pgs</div>`
     bookshelf.appendChild(bookDiv)
-  })
+  }
 }
 
 
@@ -37,4 +36,4 @@ const hitchhiker = new Book('Hitchhiker\'s Guide To The Galaxy', 'Douglas Adams'
 const theStand = new Book('The Stand', 'Stephen King', '1300', 'read it')
 
 hitchhiker.addBook()
-displayBook()
+theStand.addBook()
