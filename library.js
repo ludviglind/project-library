@@ -1,7 +1,7 @@
-// A single array to store all books
+// A single array to store all books.
 const library = []
 
-// Book constructor function
+// Book class with constructor function and addBook function.
 class Book {
   constructor(title, author, pages, read) {
     this.title = title

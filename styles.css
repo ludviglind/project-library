@@ -8,10 +8,11 @@ body {
 
 #header {
   width: 400px;
+  height: 1em;
   margin: 10px auto;
   background-color: #D3D3D4;
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 500;
   color: #25272B;
   text-align: center;
 
@@ -22,40 +23,45 @@ body {
   height: 90vh;
   margin: auto;
   background-color: #D3D3D4;
-  overflow-x: scroll;
+  padding: 10px;
+  overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(6, auto);
   grid-template-rows: repeat(60, auto);
-  justify-content: space-between;
 }
 
 .book {
-  width: 100px;
-  height: 150px;
+  width: 150px;
+  height: 200px;
   margin: 10px;
   background-color: #81a1c1;
   text-align: center;
 }
 
-#addBook {
-  font-size: 70px;
-  color: whitesmoke;
+#addBook button {
   background: none;
   border: none;
+  color: white;
+  font-size: 80px;
   margin-top: 25%;
-
 }
 
 @media screen and (min-width: 1920px) {
   #bookshelf {
-    grid-template-columns: repeat(12, auto);
+    grid-template-columns: repeat(8, auto);
     grid-template-rows: repeat(60, auto);
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 960px) {
   #bookshelf {
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(80, auto);
+    grid-template-rows: auto;
   }
+}
+
+@media screen and (max-width: 480px) {
+  #bookshelf {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;  }
 }
