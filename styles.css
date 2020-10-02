@@ -26,16 +26,8 @@ body {
   padding: 10px;
   overflow-y: scroll;
   display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-template-rows: repeat(60, auto);
-}
-
-.book {
-  width: 150px;
-  height: 200px;
-  margin: 10px;
-  background-color: #81a1c1;
-  text-align: center;
+  grid-template-columns: repeat(8, 150px);
+  grid-template-rows: repeat(8, 200px);
 }
 
 #addBook button {
@@ -46,22 +38,54 @@ body {
   margin-top: 25%;
 }
 
+.book {
+  margin: 10px;
+  background-color: #81a1c1;
+  text-align: center;
+  position: relative;
+}
+
+#author {
+  margin: 10px;
+}
+
+#title {
+  margin: 10px;
+  font-size: 20px;
+  background-color: #2e3440;
+}
+
+#pages {
+  position: absolute;
+  bottom: 0;
+  right:0;
+  margin: auto;
+  width: 50%;
+  background-color: whitesmoke;
+  color: #2e3440;
+}
+
+#read {
+  display: inline;
+}
+
 @media screen and (min-width: 1920px) {
   #bookshelf {
-    grid-template-columns: repeat(8, auto);
-    grid-template-rows: repeat(60, auto);
+    grid-template-columns: repeat(8, 150px);
+    grid-template-rows: repeat(8, 200px);
   }
 }
 
 @media screen and (max-width: 960px) {
   #bookshelf {
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(8, 200px);
   }
 }
 
 @media screen and (max-width: 480px) {
   #bookshelf {
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: auto;  }
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(8, 200px);
+  }
 }

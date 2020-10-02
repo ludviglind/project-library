@@ -1,3 +1,7 @@
+// DOM Elements
+const bookshelf = document.querySelector('#bookshelf')
+const book = document.querySelector('.book')
+
 // A single array to store all books.
 const library = []
 
@@ -16,10 +20,21 @@ class Book {
 }
 
 
+function displayBook() {
+  library.forEach(book => {
+    const bookDiv = document.createElement('div')
+    bookDiv.classList.add('book')
+    bookDiv.innerHTML =
+      `<div id="author">${book.author}</div>
+      <div id="title">${book.title}</div>
+      <div id="pages">${book.pages} pgs</div>`
+    bookshelf.appendChild(bookDiv)
+  })
+}
+
+
 const hitchhiker = new Book('Hitchhiker\'s Guide To The Galaxy', 'Douglas Adams', 300, 'read it')
 const theStand = new Book('The Stand', 'Stephen King', '1300', 'read it')
 
 hitchhiker.addBook()
-theStand.addBook()
-
-console.log(library)
+displayBook()
