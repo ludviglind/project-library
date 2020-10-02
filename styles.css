@@ -30,23 +30,24 @@ body {
   grid-template-rows: repeat(8, 200px);
 }
 
-#addBook button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 80px;
-  margin-top: 25%;
+#addBook input {
+  width: 100px;
+  margin: 5px;
 }
 
 .book {
   margin: 10px;
+  padding: 5px;
   background-color: #81a1c1;
   text-align: center;
   position: relative;
 }
 
-#author {
-  margin: 10px;
+.book button {
+  border: none;
+  font-size: 16px;
+  background-color: whitesmoke;
+  margin-top: 15px;
 }
 
 #title {
@@ -63,10 +64,6 @@ body {
   width: 50%;
   background-color: whitesmoke;
   color: #2e3440;
-}
-
-#read {
-  display: inline;
 }
 
 @media screen and (min-width: 1920px) {
