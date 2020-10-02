@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #25272B;
+  color: whitesmoke;
+}
+
+#header {
+  width: 400px;
+  margin: 10px auto;
+  background-color: #D3D3D4;
+  font-size: 40px;
+  font-weight: 400;
+  color: #25272B;
+  text-align: center;
+
+}
+
+#bookshelf {
+  width: 75%;
+  height: 90vh;
+  margin: auto;
+  background-color: #D3D3D4;
+  overflow-x: scroll;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(60, auto);
+  justify-content: space-between;
+}
+
+.book {
+  width: 100px;
+  height: 150px;
+  margin: 10px;
+  background-color: #81a1c1;
+  text-align: center;
+}
+
+#addBook {
+  font-size: 70px;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  margin-top: 25%;
+
+}
+
+@media screen and (min-width: 1920px) {
+  #bookshelf {
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(60, auto);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #bookshelf {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(80, auto);
+  }
+}
